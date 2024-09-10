@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="parents">
+        <div class="containers">
+            <a class="codebutton" href="javascript:(function() { 'use strict'; const style = document.createElement('style'); style.textContent = ` body { background-color: white; } .parent-container { display: flex; align-items: center; justify-content: center; height: 100vh; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 9999999999; opacity: 0; transition: opacity 0.5s ease; } .container { display: flex; flex-direction: column; background-color: rgba(0, 0, 0, 0.5); width: 25%; align-items: stretch; justify-content: center; padding: 50px 20px; border: 1px solid #444; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); color: white; } .option { flex: 1; outline: none; margin: 10px 0; background-color: rgba(25, 25, 25, 0.5); border: none; border-radius: 4px; color: white; padding: 15px; cursor: pointer; transition: background-color 0.3s; } .option:hover { background-color: #555; } `; document.head.appendChild(style); const parentContainer = document.createElement('div'); parentContainer.className = 'parent-container'; parentContainer.style.display = 'none'; const container = document.createElement('div'); container.className = 'container'; const inputcokie = document.createElement('input'); inputcokie.className = 'option'; inputcokie.placeholder='fre cookie'; const buttonCookies = document.createElement('button'); buttonCookies.className = 'option'; buttonCookies.textContent = 'Edit Cookies'; const buttonHeavenlyChips = document.createElement('button'); buttonHeavenlyChips.className = 'option'; buttonHeavenlyChips.textContent = 'Edit Heavenly Chips'; container.appendChild(inputcokie); container.appendChild(buttonCookies); container.appendChild(buttonHeavenlyChips); parentContainer.appendChild(container); document.body.appendChild(parentContainer); let isVisible = false; function handleClickCookie() { Game.cookies = Number(inputcokie.value); } function handleClickChips() { Game.heavenlyChips = Number(inputcokie.value); } function toggleVisibility() { if (isVisible) { parentContainer.style.opacity = '0'; setTimeout(() => { parentContainer.style.display = 'none'; }, 500); } else { parentContainer.style.display = 'flex'; setTimeout(() => { parentContainer.style.opacity = '1'; }, 10); } isVisible = !isVisible; } document.addEventListener('keydown', function(event) { const focusedElement = document.activeElement; const isInputFocused = focusedElement.tagName === 'INPUT' || focusedElement.tagName === 'TEXTAREA'; if (!isInputFocused && (event.key === 'o' || event.key === 'O')) { toggleVisibility(); } }); buttonCookies.addEventListener('click', handleClickCookie); buttonHeavenlyChips.addEventListener('click', handleClickChips); })();">Add Me to Bookmarks</a>
+        </div>
+    </div>
+</body>
+</html>
