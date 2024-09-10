@@ -5,7 +5,7 @@
     height: 100vh;
 }
 body {
-    background-color:rgb(255, 255, 255);
+    margin:none;
     background-image: url("https://orteil.dashnet.org/cookieclicker/img/darkNoise.jpg");
 }
 .containers {
